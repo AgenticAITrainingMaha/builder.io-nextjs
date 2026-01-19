@@ -324,6 +324,45 @@
   letter-spacing: -0.32px;
 }
 
+/* Users Tab Styles */
+.usersHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.usersTitle {
+  color: #545F71;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.56px;
+  margin: 0;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+}
+
+.statusActive {
+  background: #D1F2E6;
+  color: #047857;
+}
+
+.statusInactive {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1280px) {
   .mainContent {
