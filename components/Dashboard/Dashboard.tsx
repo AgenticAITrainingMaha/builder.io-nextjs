@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 
 interface TableRow {
@@ -9,15 +9,34 @@ interface TableRow {
   jobTitle: string;
 }
 
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  status: string;
+  joinDate: string;
+}
+
 interface DashboardProps {
   balance?: string;
 }
 
 function Dashboard({ balance = "$ 1,893.44" }: DashboardProps) {
+  const [activeTab, setActiveTab] = useState<"dashboard" | "users">("dashboard");
+
   const tableData: TableRow[] = [
     { id: 1, name: "Darlene Robertson", dateOfBirth: "02/07/1971", jobTitle: "Dog Trainer" },
     { id: 2, name: "Ronald Richards", dateOfBirth: "28/03/1968", jobTitle: "Marketing Head" },
     { id: 3, name: "Jenone Bell", dateOfBirth: "12/08/1985", jobTitle: "President of Sales" },
+  ];
+
+  const usersData: User[] = [
+    { id: 1, name: "Alex Johnson", email: "alex.johnson@example.com", status: "Active", joinDate: "01/15/2024" },
+    { id: 2, name: "Sarah Williams", email: "sarah.williams@example.com", status: "Active", joinDate: "02/20/2024" },
+    { id: 3, name: "Michael Brown", email: "michael.brown@example.com", status: "Inactive", joinDate: "12/10/2023" },
+    { id: 4, name: "Emily Davis", email: "emily.davis@example.com", status: "Active", joinDate: "03/05/2024" },
+    { id: 5, name: "David Miller", email: "david.miller@example.com", status: "Active", joinDate: "01/22/2024" },
+    { id: 6, name: "Jessica Wilson", email: "jessica.wilson@example.com", status: "Inactive", joinDate: "11/30/2023" },
   ];
 
   return (
