@@ -368,14 +368,20 @@
   .mainContent {
     max-width: calc(100% - 337px - 25px);
   }
-  
+
   .tableContainer {
     width: 100%;
     max-width: 901px;
   }
-  
+
   .table {
     width: 100%;
+  }
+
+  .usersHeader {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
   }
 }
 
@@ -384,23 +390,23 @@
     height: auto;
     min-height: 100vh;
   }
-  
+
   .topNav {
     flex-direction: column;
     height: auto;
     gap: 12px;
     padding: 12px;
   }
-  
+
   .topNavLeft {
     width: 100%;
   }
-  
+
   .searchContainer {
     width: 100%;
     max-width: 100%;
   }
-  
+
   .sideNav {
     position: relative;
     left: 0;
@@ -410,7 +416,7 @@
     margin: 12px;
     margin-bottom: 0;
   }
-  
+
   .mainContent {
     position: relative;
     left: 0;
@@ -419,21 +425,31 @@
     max-width: 100%;
     padding: 12px;
   }
-  
+
   .accountSummaryCards {
     flex-direction: column;
     gap: 16px;
   }
-  
+
   .accountCard {
     width: 100%;
   }
-  
+
   .tableContainer {
     overflow-x: auto;
   }
-  
+
   .table {
     min-width: 600px;
+  }
+
+  .usersHeader {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .usersTitle {
+    font-size: 24px;
   }
 }
